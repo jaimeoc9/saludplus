@@ -199,15 +199,15 @@
             <h3 className="font-semibold mb-1">Distribución de macros</h3>
             <canvas ref={pieRef}></canvas>
           </div>
-        </div>
-        const addWeight=()=>{
+          const addWeight=()=>{
   const hist = JSON.parse(localStorage.getItem('history') || '[]');
   hist.push({date: today, weight: +newW});
   localStorage.setItem('history', JSON.stringify(hist));
   alert('Peso añadido');
   window.location.reload(); // <-- esto asegura que se actualice la gráfica
 };
-
+   </div>
+        </div>
       );
     }
 
