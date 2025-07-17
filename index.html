@@ -41,9 +41,101 @@
 
     /******************** DATA ********************/
     const FOOD_DB={
-      manzana:{energy:52,protein:0.3,carbs:14,fats:0.2}, platano:{energy:89,protein:1.1,carbs:23,fats:0.3}, pan:{energy:265,protein:9,carbs:49,fats:3.2}, pollo:{energy:165,protein:31,carbs:0,fats:3.6}, arroz:{energy:130,protein:2.7,carbs:28,fats:0.3}
-      // Se pueden añadir más alimentos aquí
+      // Frutas
+      manzana:        {energy:52, protein:0.3, carbs:14, fats:0.2},
+      platano:        {energy:89, protein:1.1, carbs:23, fats:0.3},
+      naranja:        {energy:47, protein:0.9, carbs:12, fats:0.1},
+      pera:           {energy:57, protein:0.4, carbs:15, fats:0.1},
+      kiwi:           {energy:61, protein:1.1, carbs:15, fats:0.5},
+      fresa:          {energy:33, protein:0.8, carbs:8, fats:0.3},
+      sandia:         {energy:30, protein:0.6, carbs:8, fats:0.2},
+      melon:          {energy:34, protein:0.8, carbs:8, fats:0.2},
+      mango:          {energy:60, protein:0.8, carbs:15, fats:0.4},
+      uva:            {energy:69, protein:0.7, carbs:18, fats:0.2},
+      cereza:         {energy:50, protein:1, carbs:12, fats:0.3},
+      piña:           {energy:50, protein:0.5, carbs:13, fats:0.1},
+
+      // Verduras y hortalizas
+      tomate:         {energy:18, protein:0.9, carbs:3.9, fats:0.2},
+      zanahoria:      {energy:41, protein:0.9, carbs:10, fats:0.2},
+      lechuga:        {energy:15, protein:1.4, carbs:2.9, fats:0.2},
+      brocoli:        {energy:34, protein:2.8, carbs:7, fats:0.4},
+      espinaca:       {energy:23, protein:2.9, carbs:3.6, fats:0.4},
+      calabacin:      {energy:17, protein:1.2, carbs:3.1, fats:0.3},
+      cebolla:        {energy:40, protein:1.1, carbs:9, fats:0.1},
+      patata:         {energy:77, protein:2, carbs:17, fats:0.1},
+      batata:         {energy:86, protein:1.6, carbs:20, fats:0.1},
+      berenjena:      {energy:25, protein:1, carbs:6, fats:0.2},
+      champiñon:      {energy:22, protein:3.1, carbs:3.3, fats:0.3},
+      coliflor:       {energy:25, protein:2, carbs:5, fats:0.3},
+
+      // Legumbres y cereales
+      lentejas:       {energy:116, protein:9, carbs:20, fats:0.4},
+      garbanzos:      {energy:164, protein:9, carbs:27, fats:2.6},
+      alubias:        {energy:127, protein:9, carbs:22, fats:0.5},
+      arroz:          {energy:130, protein:2.7, carbs:28, fats:0.3},
+      arroz_integral: {energy:123, protein:2.7, carbs:25, fats:1},
+      avena:          {energy:389, protein:16.9, carbs:66, fats:6.9},
+      quinoa:         {energy:120, protein:4.1, carbs:21, fats:1.9},
+      maiz:           {energy:86, protein:3.2, carbs:19, fats:1.2},
+
+      // Panes y harinas
+      pan:            {energy:265, protein:9, carbs:49, fats:3.2},
+      pan_integral:   {energy:247, protein:8.8, carbs:41, fats:3.3},
+      pasta:          {energy:131, protein:5, carbs:25, fats:1.1},
+      pasta_integral: {energy:124, protein:5.5, carbs:27, fats:0.9},
+
+      // Carnes y pescados
+      pollo:          {energy:165, protein:31, carbs:0, fats:3.6},
+      ternera:        {energy:250, protein:26, carbs:0, fats:17},
+      cerdo:          {energy:242, protein:27, carbs:0, fats:14},
+      pavo:           {energy:104, protein:22, carbs:0, fats:2},
+      cordero:        {energy:294, protein:25, carbs:0, fats:21},
+      atun:           {energy:132, protein:28, carbs:0, fats:1},
+      salmon:         {energy:208, protein:20, carbs:0, fats:13},
+      merluza:        {energy:70, protein:12, carbs:0, fats:2},
+      sardina:        {energy:208, protein:25, carbs:0, fats:11},
+      huevo:          {energy:155, protein:13, carbs:1.1, fats:11},
+      clara_huevo:    {energy:52, protein:11, carbs:0.7, fats:0.2},
+
+      // Lácteos y alternativas
+      leche:          {energy:42, protein:3.4, carbs:5, fats:1},
+      leche_soja:     {energy:33, protein:3.3, carbs:0.6, fats:1.6},
+      yogur:          {energy:59, protein:10, carbs:3.6, fats:0.4},
+      queso:          {energy:402, protein:25, carbs:1.3, fats:33},
+      queso_cottage:  {energy:98, protein:11, carbs:3.4, fats:4.3},
+
+      // Frutos secos y semillas
+      nueces:         {energy:654, protein:15, carbs:14, fats:65},
+      almendras:      {energy:579, protein:21, carbs:22, fats:50},
+      avellanas:      {energy:628, protein:15, carbs:17, fats:61},
+      cacahuetes:     {energy:567, protein:26, carbs:16, fats:49},
+      pistachos:      {energy:562, protein:20, carbs:28, fats:45},
+      chia:           {energy:486, protein:17, carbs:42, fats:31},
+      lino:           {energy:534, protein:18, carbs:29, fats:42},
+      semillas_girasol:{energy:584, protein:21, carbs:20, fats:52},
+
+      // Aceites y grasas
+      aceite_oliva:   {energy:884, protein:0, carbs:0, fats:100},
+      aceite_girasol: {energy:884, protein:0, carbs:0, fats:100},
+      mantequilla:    {energy:717, protein:0.9, carbs:0.1, fats:81},
+
+      // Platos preparados y snacks
+      tortilla_patata:{energy:154, protein:7, carbs:10, fats:9},
+      pizza:          {energy:266, protein:11, carbs:33, fats:10},
+      paella:         {energy:174, protein:7, carbs:22, fats:6},
+      gazpacho:       {energy:44, protein:1, carbs:6, fats:2},
+      lasaña:         {energy:135, protein:7, carbs:13, fats:6},
+      empanada:       {energy:290, protein:6, carbs:27, fats:17},
+      croquetas:      {energy:196, protein:7, carbs:17, fats:11},
+
+      // Otros básicos
+      azucar:         {energy:387, protein:0, carbs:100, fats:0},
+      miel:           {energy:304, protein:0.3, carbs:82, fats:0},
+      mermelada:      {energy:278, protein:0.4, carbs:70, fats:0.1}
+      // Puedes seguir ampliando la lista aquí
     };
+
     const ACT_FACT={sedentario:1.2, ligero:1.375, moderado:1.55, activo:1.725, muy_activo:1.9};
     const MACRO_LABEL={calories:'Calorías',protein:'Proteínas',carbs:'Carbohidratos',fats:'Grasas'};
 
@@ -149,61 +241,4 @@
       const [newW,setNewW]=useState(user.weight);
       const pieRef=useRef(); const today=new Date().toISOString().slice(0,10);
       const todays=entries.filter(e=>e.date===today);
-      useEffect(()=>{ if(pieRef.current._chart) pieRef.current._chart.destroy();
-        const t={protein:0,carbs:0,fats:0}; todays.forEach(e=>{t.protein+=e.protein;t.carbs+=e.carbs;t.fats+=e.fats});
-        pieRef.current._chart=new Chart(pieRef.current.getContext('2d'),{type:'pie',data:{labels:['Proteínas','Carbs','Grasas'],datasets:[{data:[t.protein,t.carbs,t.fats],backgroundColor:['#10B981','#3b82f6','#FBBF24']}]}});
-      },[entries]);
-      const addFood=()=>{const base=FOOD_DB[food.trim().toLowerCase()]; if(!base){alert('No está en la BD');return;} const e={id:Date.now(),date:today,name:food,protein:base.protein*qty,carbs:base.carbs*qty,fats:base.fats*qty,calories:base.energy*qty}; const up=[...entries,e]; setEntries(up); localStorage.setItem('entries',JSON.stringify(up));};
-      const addWeight=()=>{const hist=JSON.parse(localStorage.getItem('history')||'[]'); hist.push({date:today,weight:+newW}); localStorage.setItem('history',JSON.stringify(hist)); alert('Peso añadido');};
-      return (
-        <div className="main space-y-6">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-semibold">¡Hola, {user.name}!</h2>
-            <button onClick={()=>{ localStorage.clear(); window.location.reload(); }} className="bg-red-500 text-white px-4 py-2 rounded">Cerrar sesión</button>
-          </div>
-          <div className="card mb-4 flex items-end gap-2"><input type="number" className="border p-2 rounded w-24" value={newW} onChange={e=>setNewW(e.target.value)} /><button onClick={addWeight} className="bg-green-600 text-white px-4 py-2 rounded">Añadir Peso</button></div>
-          <div className="card grid grid-cols-4 gap-4">
-            {Object.entries(goal).map(([k,v])=>(
-              <div key={k}><label className="text-sm">{MACRO_LABEL[k]}</label><input disabled className="w-full border p-1 rounded" value={v}/></div>
-            ))}
-          </div>
-          <div className="card flex gap-2">
-            <input className="flex-1 border p-2 rounded" placeholder="Alimento" value={food} onChange={e=>setFood(e.target.value)} />
-            <input type="number" className="w-20 border p-2 rounded" value={qty} onChange={e=>setQty(+e.target.value)} />
-            <button onClick={addFood} className="bg-blue-600 text-white px-4 rounded">Añadir</button>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold mb-1">Comidas de hoy</h3>
-            {todays.length?todays.map(e=>(<p key={e.id}>{e.name} – {Math.round(e.calories)} Kcal</p>)):<p className="text-gray-500">Sin registros.</p>}
-          </div>
-          <div className="card">
-            <h3 className="font-semibold mb-1">Distribución de macros</h3>
-            <canvas ref={pieRef}></canvas>
-          </div>
-        </div>
-      );
-    }
-
-    /******************** ROOT APP ********************/
-    function App(){
-      const [step,setStep]=useState('landing');
-      const [user,setUser]=useState(null); const [goal,setGoal]=useState(null);
-      useEffect(()=>{const u=JSON.parse(localStorage.getItem('user')||'null');const g=JSON.parse(localStorage.getItem('goal')||'null');if(u&&g){setUser(u);setGoal(g);setStep('dash');}},[]);
-      const onSave=(u,g)=>{setUser(u);setGoal(g);setStep('dash');};
-      return (
-        <ErrorBoundary>
-          {step==='landing'&&<Landing onStart={()=>setStep('reg')} />}
-          {step==='reg'&&<Registration onSave={onSave} onBack={()=>setStep('landing')} />}
-          {step==='dash'&&<>
-            <SidebarPerfil user={user} />
-            <SidebarHistory history={JSON.parse(localStorage.getItem('history')||'[]')} />
-            <Dashboard user={user} goal={goal} />
-          </>}
-        </ErrorBoundary>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
-  </script>
-</body>
-</html>
+      useEffect(()=>
