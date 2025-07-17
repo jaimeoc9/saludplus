@@ -167,12 +167,6 @@
       const [food,setFood]=useState(''); const [qty,setQty]=useState(1);
       const [newW,setNewW]=useState(user.weight);
       const pieRef=useRef(); const today=new Date().toISOString().slice(0,10);
-      const addWeight=()=>{
-  const hist = JSON.parse(localStorage.getItem('history') || '[]');
-  hist.push({date: today, weight: +newW});
-  localStorage.setItem('history', JSON.stringify(hist));
-  alert('Peso añadido');
-  window.location.reload(); // <-- esto asegura que se actualice la gráfica
       const todays=entries.filter(e=>e.date===today);
       useEffect(()=>{ if(pieRef.current._chart) pieRef.current._chart.destroy();
         const t={protein:0,carbs:0,fats:0}; todays.forEach(e=>{t.protein+=e.protein;t.carbs+=e.carbs;t.fats+=e.fats});
